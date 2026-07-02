@@ -41,7 +41,7 @@ pub fn get_quote(
     )?;
 
     swap_result.next_sqrt_price = apply_next_sqrt_price(
-        pool,
+        &pool,
         &swap_result,
         &fee_mode,
         trade_direction,
