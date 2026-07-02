@@ -18,6 +18,11 @@ pub fn get_quote(
     let current_point = get_current_point(pool.activation_type, current_slot, current_timestamp)?;
     ensure!(is_swap_enable(pool, current_point)?, "Swap is disabled");
 
+
+    let mut pool = *pool;
+
+    pool.update_pre_swap(current_timestamp)?;
+
     let trade_direction = if a_to_b {
         TradeDirection::AtoB
     } else {
