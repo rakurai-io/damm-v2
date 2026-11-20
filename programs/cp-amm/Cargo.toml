@@ -25,6 +25,7 @@ anchor-debug = []
 
 [dependencies]
 anchor-lang = { workspace = true, features = ["event-cpi"] }
+solana-clock = { workspace = true }
 anchor-spl = { workspace = true, features = [] }
 bytemuck = { workspace = true, features = ["derive", "min_const_generics"] }
 static_assertions = { workspace = true }

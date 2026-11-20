@@ -746,6 +746,7 @@ dependencies = [
  "pinocchio-token-2022",
  "proptest",
  "ruint",
+ "solana-clock 4.0.0",
  "static_assertions",
 ]
 

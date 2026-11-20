@@ -36,6 +36,10 @@ const-crypto = "0.3.0"
 pinocchio = { git = "https://github.com/anza-xyz/pinocchio.git", rev = "17b0e862c01a868ea07ef81a2f8a9b4a504bdfed" }
 pinocchio-token-2022 = { git = "https://github.com/anza-xyz/pinocchio.git", rev = "17b0e862c01a868ea07ef81a2f8a9b4a504bdfed" }
 derive-variant-count = { path = "libs/derive-variant-count" }
+# anchor-lang's solana-v4 Clock is solana-clock 4. Clock::get exists only with
+# the sysvar feature. A downstream lock can resolve solana-clock 3.2.0, whose
+# sysvar feature does not turn that flag on for v4.
+solana-clock = { version = "4.0.0", features = ["sysvar"] }
 anyhow = "1.0.71"
 proptest = "1"
 
